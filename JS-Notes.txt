@@ -1,0 +1,60 @@
+Class 6
+== compares values, === compares value and type
+arrays are stored as linked list/ non-sequentially
+
+var a = {"x":"y" , "a":"b" }  Key-Value Pairs
+
+Same nested quotes will give error
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS-Intro</title>
+    <script>        // DOM Parser has to wait for the script to load, line-by-line execution
+        var a = 2;
+        console.log(a);
+    </script>
+</head>
+<body>
+
+
+<script>        // Better Option, DOM is ready and can be rendered on the page
+    var a = 2;
+    console.log(a);
+</script>
+</body>
+</html>
+
+JS Parsing is slow while DOM Parsing is fast
+
+function hello() {      // Function Definition
+    return "Hello Ladies";
+}
+
+
+There are two passes -> Compiler (First) and Interpreter (Second)
+console.log(hello());   // Works -> Functions have a property of hoisting themselves to the top
+function hello() {
+    return "Hello Ladies";
+}
+console.log(hello());
+
+
+console.log(world());   // Doesn't Work -> Function Expression, Variable are not hoisted to the top
+var world = function () {
+    return "Hi there!";
+};
+console.log(world());
+
+function hello(...a) ... -> spread operator, takes all the arguments as an array
+
+"use strict" will not ignore errors which are usually ignored by js such as semi-colons
+
+IIFE -> Immediately-invoked function expression -> It executes immediately after it is created,
+Avoids leaking of variables, Avoids polluting the global namespace
+
+var -> functional scope
+let -> block scope
+
+functions can be defined inside another function

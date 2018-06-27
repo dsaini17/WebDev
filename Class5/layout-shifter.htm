@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout-Shifter</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .box {
+            width: 100%;
+            height: 33.33vh;
+        }
+
+        .box1 {
+            background-color: yellow;
+        }
+
+        .box-container{
+            width: 100%;
+        }
+
+        .box3 {
+            background-color: green;
+        }
+
+        .box4 {
+            background-color: darkorange;
+        }
+
+        @media screen and (min-width: 600px) {
+            .box1 {
+                width: 30%;
+                height: 100vh;
+            }
+
+            .box-container {
+                width: 70%;
+                height: 100vh;
+            }
+
+            .box3,.box4{
+                height: 50vh;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="container">
+        <div class="box box1"></div>
+        <div class="box-container">
+            <div class="box box3"></div>
+            <div class="box box4"></div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

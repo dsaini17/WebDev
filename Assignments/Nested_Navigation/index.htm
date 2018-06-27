@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+        Nested Navigation
+    </title>
+    <style>
+
+        .nav-container {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: slategray;
+        }
+
+        .drop-down-container {
+            width: 20%;
+        }
+
+        .nav-option {
+            background-color: darkred;
+            color: white;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .primary-list {
+            display: none;
+        }
+
+        .drop-down-list:hover .primary-list{
+            display: block;
+            cursor: pointer;
+            transition: 0.8s;
+            background-color: darkorange;
+        }
+
+        .drop-down-option {
+            display: inline-block;
+            color: white;
+            padding: 6px;
+            font-size: 18px;
+        }
+
+        .secondary-list {
+            display: none;
+        }
+
+        .secondary-list > div {
+            margin-left: 10px;
+            margin-right: 10px;
+            color: white;
+            padding: 4px;
+            font-size: 16px;
+        }
+
+        .nav-option:hover ~ .primary-list {
+            display: block;
+            cursor: pointer;
+            transition: 0.8s;
+        }
+
+        .drop-down-option:hover + .secondary-list {
+            position: absolute;
+            display: inline-block;
+            cursor: pointer;
+            background-color: darkgreen;
+            transition: 0.8s;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="nav-container">
+            <div class="drop-down-container">
+                <div class="drop-down-list">
+                    <div class="nav-option">
+                        Primary Option 1
+                    </div>
+                    <div class="primary-list">
+                        <div class="drop-down-option">
+                            Secondary Option 1
+                        </div>
+                        <div class="secondary-list">
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                        </div>
+                    </div>
+                    <div class="primary-list">
+                        <div class="drop-down-option">
+                            Secondary Option 2
+                        </div>
+                        <div class="secondary-list">
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                        </div>
+                    </div>
+                    <div class="primary-list">
+                        <div class="drop-down-option">
+                            Secondary Option 3
+                        </div>
+                        <div class="secondary-list">
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="drop-down-container">
+                <div class="drop-down-list">
+                    <div class="nav-option">
+                        Primary Option 2
+                    </div>
+                    <div class="primary-list">
+                        <div class="drop-down-option">
+                            Secondary Option 1
+                        </div>
+                        <div class="secondary-list">
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                        </div>
+                    </div>
+                    <div class="primary-list">
+                        <div class="drop-down-option">
+                            Secondary Option 2
+                        </div>
+                        <div class="secondary-list">
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                        </div>
+                    </div>
+                    <div class="primary-list">
+                        <div class="drop-down-option">
+                            Secondary Option 3
+                        </div>
+                        <div class="secondary-list">
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="drop-down-container">
+                <div class="drop-down-list">
+                    <div class="nav-option">
+                        Primary Option 3
+                    </div>
+                    <div class="primary-list">
+                        <div class="drop-down-option">
+                            Secondary Option 1
+                        </div>
+                        <div class="secondary-list">
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                        </div>
+                    </div>
+                    <div class="primary-list">
+                        <div class="drop-down-option">
+                            Secondary Option 2
+                        </div>
+                        <div class="secondary-list">
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                        </div>
+                    </div>
+                    <div class="primary-list">
+                        <div class="drop-down-option">
+                            Secondary Option 3
+                        </div>
+                        <div class="secondary-list">
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="drop-down-container">
+                <div class="drop-down-list">
+                    <div class="nav-option">
+                        Primary Option 4
+                    </div>
+                    <div class="primary-list">
+                        <div class="drop-down-option">
+                            Secondary Option 1
+                        </div>
+                        <div class="secondary-list">
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                        </div>
+                    </div>
+                    <div class="primary-list">
+                        <div class="drop-down-option">
+                            Secondary Option 2
+                        </div>
+                        <div class="secondary-list">
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                        </div>
+                    </div>
+                    <div class="primary-list">
+                        <div class="drop-down-option">
+                            Secondary Option 3
+                        </div>
+                        <div class="secondary-list">
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                            <div>Lorem Ipsum Dolor</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+</body>
+</html>

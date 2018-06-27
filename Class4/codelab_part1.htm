@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; scalable=1.0">
+    <title>
+        CodeLab Part 1
+    </title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .box {
+            width: 100%;
+            min-height: 100px;
+        }
+
+        .box1 {
+            background-color: rebeccapurple;
+        }
+
+        .box2 {
+            background-color: yellow;
+        }
+
+        .box3 {
+            background-color: darkorange;
+        }
+
+        .box4 {
+            background-color: green;
+        }
+
+        .box5 {
+            background-color: red;
+        }
+
+        @media screen and (min-width: 480px) and (max-width: 720px) {
+            .box {
+                width: 40%;
+            }
+
+            .box1 {
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width: 721px) {
+            .container{
+                max-width: 800px;
+                margin: 0 auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<main>
+    <section>
+        <div class="container">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+            <div class="box box4"></div>
+            <div class="box box5"></div>
+        </div>
+    </section>
+</main>
+</body>
+</html>

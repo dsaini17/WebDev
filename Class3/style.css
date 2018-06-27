@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box; /*Compensates Padding*/
+}
+
+.face {
+    height: 200px;
+    width: 200px;
+    border: solid #ffe90d;
+    border-radius: 50%;
+    background-color: #fff73d;
+    position: relative;
+}
+
+.lefteye {
+    position: absolute;
+    top: 40px;
+    width: 45px;
+    height: 45px;
+    left: 40px;
+    background-color: #1d1d1d;
+    border: solid black;
+    border-radius: 50%;
+}
+
+.righteye {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 45px;
+    height: 45px;
+    background-color: #1d1d1d;
+    border: solid black;
+    border-radius: 50%;
+}
+
+.smile-container {
+    position: relative;
+    width: 100%;
+    left: 25%;
+}
+
+.smile {
+    height: 100px;
+    width: 100px;
+    margin-top: 30%;
+    border-bottom: solid 10px crimson;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    transition: border-bottom 0.8s;
+}
+
+.smile:hover {
+    height: 100px;
+    width: 100px;
+    margin-top: 50%;
+    border-bottom: 0;
+    border-top: solid 10px crimson;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    transition: border-top 0.8s;
+    cursor: pointer;
+}
+
+.container {
+    height: 300px;
+    font-size: 0px;
+}
+
+.box {
+    color: whitesmoke;
+    font-size: 20px;
+    margin: 10px;
+    min-height: 200px;
+    padding: 20px;
+    display: inline-block;
+    width: calc(33.33% - 20px); /* Compensating Margin*/
+}
+
+.one {
+    background-color: rebeccapurple;
+}
+
+.two {
+    background-color: darkred;
+}
+
+.three {
+    background-color: darkgreen;
+}
+
+span {
+    border: solid 2px aqua;
+}
+
+header p {
+    color: chartreuse;
+    width: 500px;
+    font-size: 20px;
+    background: black;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+#box1 {
+    border: dashed 4px orange;
+}
+
+#box2 {
+    border: solid 4px deeppink;
+    color: orangered;
+}

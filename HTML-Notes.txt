@@ -1,0 +1,29 @@
+Class 1
+div and span aren't semantic tags
+use headings with customised font-size instead of para
+section is a semantic element for isolated blocks
+
+Class 2
+Document Object Model (DOM) is a B+ tree
+nbsp -> non breaking space
+<a target="_blank"> used for navigation to new tab. Blank and self are used
+<main> section provides main content of the page. It solves the accessibilty issue
+Screen Reader will not know <b> tag is for bold text. Use <strong> instead
+Screen Reader understands <em> emphasize instead of <i>
+combination of semantic and non-semantic tags must be used
+A section can have its own header and footer
+Aside is the side information. Not in the main area
+li takes entire width
+Screen Reader reads alt in <img>
+<form> only tag that takes user input
+<table> is non-semantic
+Web Application should be usable by Keyboard only to avoid Accessibility issue
+thead, tfoot, tbody are semantic tags
+DOM parser errors are due to HTML document
+Tags -> Tokens -> DOM Tree -> utf-8 tokens
+DOM + CSSOM -> Render Tree ( Displays everything )
+
+
+
+
+

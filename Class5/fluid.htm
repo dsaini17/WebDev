@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fluid</title>
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .box{
+            width: 20%;
+            height: 200px;
+        }
+
+        .box1{
+            background-color: yellow;
+        }
+
+        .box2{
+            background-color: blueviolet;
+        }
+
+        .box3{
+            background-color: darkslategrey;
+        }
+
+        .box4{
+            background-color: darkorange;
+        }
+
+        .box5{
+            background-color: deeppink;
+        }
+
+        @media screen and (min-width: 600px) {
+            .box1{
+                width: 100%;
+            }
+
+            .box2,.box3,.box4,.box5{
+                width: 50%;
+            }
+        }
+
+        @media screen and (min-width: 800px){
+            .box1,.box2{
+                width: 50%;
+            }
+            .box3,.box4,.box5{
+                width: 33.33%;
+            }
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="container">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+    </div>
+</main>
+</body>
+</html>

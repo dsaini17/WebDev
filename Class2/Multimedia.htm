@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>
+        Audio & Video
+    </title>
+</head>
+<body>
+<main>
+    <section>
+        <h2>Test Audio from MDN</h2>
+        <ol>
+            <li>
+                <p>Preload = none, Audio isn't loaded automatically</p>
+                <audio controls preload="none">
+                    <source src="http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg">
+                    Your browser doesn't support Audio tag
+                </audio>
+            </li>
+            <li>
+                <p>Preload = metadata, Metadata like length are fetched</p>
+                <audio controls preload="metadata">
+                    <source src="http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg">
+                    Your browser doesn't support Audio tag
+                </audio>
+            </li>
+            <li>
+                <p>Preload = auto, Audio file is automatically downloaded. It is the default option for empty string</p>
+                <audio controls preload="auto">
+                    <source src="http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg">
+                    Your browser doesn't support Audio tag
+                </audio>
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h2>Accessiblity Concerns</h2>
+        <p>Audio with spoken dialog should provide both captions and transcripts that accurately describe its content.
+            Captions allow people who are experiencing hearing loss to understand an audio recording's content as the
+            recording is being played, while transcripts allow people who need additional time to be able to review the
+            recording's content at a pace and format that is comfortable for them. </p>
+    </section>
+    <section>
+        <h2>Sample Video</h2>
+        <p>Video uses a WebVTT ( Video Text Tracks ) file for Captions. Each item in a track file is called a cue. Each
+            cue has a start time and end time separated by an arrow, with cue text in the line below.HTML and JSON can
+            be used in cues</p>
+        <video controls preload="auto" poster="http://icons.iconarchive.com/icons/aaron-sinuhe/tv-movie-folder/512/MIB-2-icon.png">
+            <source src="resources/MIB2.mp4" type="video/mp4">
+            <source src="resources/MIB2.webm" type="video/webm">
+            Your browser doesn't support Video Tag
+            <track kind="subtitles" label="Polish" srclang="pt" src="resources/MIB2-subtitles-pt-BR.vtt">
+        </video>
+    </section>
+</main>
+</body>
+</html>

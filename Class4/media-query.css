@@ -1,0 +1,28 @@
+
+.big-container{
+    text-align: center;
+}
+
+.container{
+    padding: 10px;
+    border: solid 1px yellow;
+    display: inline-block;
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 30%;
+}
+
+@media(max-width: 755px){
+    .container{
+        background-color: darkred;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+    .container{
+        display: block;
+    }
+}

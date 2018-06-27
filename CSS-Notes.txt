@@ -1,0 +1,121 @@
+Class 3
+HTML itself adds space b/w divs when inline-blocks are used known as Text-Spacing
+<div class="container">
+            <div class="box">
+                <p>
+                    Will you
+                </p>
+            </div>
+            <div class="box">
+                <p>
+                    follow me
+                </p>
+            </div>
+            <div class="box">
+                <p>
+                    one last time?
+                </p>
+            </div>
+        </div>
+Enter indicates the browser to add text-space
+No Text Spacing
+<div class="container">
+            <div class="box">
+                <p>
+                    Will you
+                </p>
+            </div><div class="box">
+                <p>
+                    follow me
+                </p>
+            </div><div class="box">
+                <p>
+                    one last time?
+                </p>
+            </div>
+        </div>
+Either reduce % or use font-size hack
+.container {
+    height: 400px;
+    font-size: 0px;
+}
+
+.box {
+    color: whitesmoke;
+    font-size: 20px;
+    text-align: center;
+    height: inherit;
+    display: inline-block;
+    width: 33.3%;
+}
+
+For compensating padding border-box can be used which restricts height and width of the box
+box-sizing: border-box;
+default = content-box
+box-sizing must be declared globally ( good-practice )
+
+position : relative -> relative to itself
+position : absolute -> relative to origin ( (0,0) coordinates / first non-static(absolute/relative) parent )
+
+Class 4
+div p -> Targets all <p> inside div
+div > p -> Targets all <p> nested one level inside div
+div + p -> Targets immediate <p> sibling
+div ~ p -> Targets all <p> siblings
+
+display : inline,block,inline-block,flex(imp),none
+inline -> height and width are auto, cannot be set, decided by character size
+inline-block -> height and width can be set, work as inline
+none -> no node inside dom
+visibility = hidden -> no content in dom
+opacity = 0 -> content and element are present in dom but is not displayed
+position = absolute -> problems with select box can be countered, multiple layer structure
+z-index -> used to define different layers
+position = fixed -> fixed in terms of viewport
+
+Responsive Design -> works in all devices
+
+1. Setting Viewport
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+Browser scales the text itself
+Default scaling is 1:1
+initial-scale > 1 will increase the character-size, important for devices having
+
+2. CSS Media Query
+@media (query){
+    /* CSS Rules used when query matches */
+}
+(a) Hard coded Breakpoints
+(b) Content based Breakpoints
+
+@media screen -> default
+@media print -> for printing
+height and width are most popular
+orientation = portrait/landscape can be used for mobile web pages
+
+3. Flex
+Everything is constrained to a single row
+justify-content = center (horizontal)
+align-items = center (vertical)
+margin: 0 auto
+
+
+Class5
+While using float, parent loses its height
+To regain height, clear:both;
+
+Fluid Layout -> Flex & Media Queries
+Column Drop Layout -> order, minimum order has highest priority
+
+vh -> view port height
+
+Bootstrap
+<div class = "row">
+    <div class = "col-6 col-sm-10 col-md-2 col-lg-12"></div>
+    <div class = "col-6 col-sm-10 col-md-2 col-lg-12"></div>
+</div>
+mobile,tab,medium desktop,large desktop
+
+<div class ="col-6">
+Applies by default to all Screen sizes
+before,after are pseudo-selectors ex: Image at the end of Input Box

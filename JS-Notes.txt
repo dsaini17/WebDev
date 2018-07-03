@@ -53,8 +53,94 @@ function hello(...a) ... -> spread operator, takes all the arguments as an array
 
 IIFE -> Immediately-invoked function expression -> It executes immediately after it is created,
 Avoids leaking of variables, Avoids polluting the global namespace
+It is used for defining public and private functions
 
 var -> functional scope
 let -> block scope
 
 functions can be defined inside another function
+
+window object is the global object
+
+function main() {
+    var x = 2;
+    console.log(y);
+    if (true) {
+        var y = 3;
+    }
+}
+
+
+Class 7
+
+(function () {  // Anonymous Function (without name)
+
+})();
+
+this -> window (default) , scope has no respect
+
+Binding Rule :-
+(1) Implicit-Binding
+'this' will become left side of '.' while calling ex: fruit.getName(); and if getName() is returning 'this' then it will show
+fruit content instead of default window
+var fruit = {
+    name: 'apple',
+    getName: function () {
+        return this;
+    }
+};
+
+console.log(fruit.name);
+console.log(fruit.getName());   // Implicit
+
+(2) Explicit-Binding
+function read() {
+    console.log(this.file);
+}
+
+var file = {
+    name : 'index',
+    content : 'xyz abc',
+    file : 'new file'
+};
+
+read(); // Default Window Binding
+read.call(file); // Explicit Binding
+
+var binder = read.bind(file,'a','b');   // Creates new function and binds scope to it (doesn't call)
+binder();
+
+list = ['c','d','e'];
+read.apply(file,list);  // Used for passing lists,objects
+
+(3) New Binding
+It uses new keyword and now 'this' becomes an object
+function Character(name,work) {
+    this.name = name;
+    this.work = work;
+}
+
+var superman = new Character('superman','fights evil');
+
+console.log(superman);
+
+(4) Default Window Binding
+
+
+Interpolation using backticks `${}`
+
+Prototypical Chains ( JS Inheritance )
+__proto__ is denderproto linkage that links objects to function.prototype
+__proto__ is used for debugging
+_________________________________________________________
+|                                                        |
+|   Function Definition -- Prototype --> _____________   |                    ____________
+|                ^                      |             |  |                   |            |
+|                |                      |    Object   |--|---- __proto__ --> |            | Object.prototype -- __proto__ --> null
+|                 ------ Constructor -- |_____________|  |                   |____________|
+|                                           |            |
+|                                       __proto__        |
+|                                           |            |
+|                                        Object          |
+|________________________________________________________|
+
